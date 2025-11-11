@@ -1,4 +1,4 @@
 <pre>
 <?php
 $data = [-10 => '山田', '日尾'];
-print($data);
+print_r($data);
