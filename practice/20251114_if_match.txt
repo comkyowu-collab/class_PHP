@@ -1,0 +1,104 @@
+問1.
+
+年齢を格納する変数$ageを12歳以下ならchild、成人ならadult、64歳以上ならseniorに分類し、それぞれバスの運賃を500円、1200円、700円に設定せよ
+
+$age = #
+if ($age <= 12){
+    $category="child" ;
+    }elseif ($age <=64 ){
+    $category="adalt"
+    }else{
+    $category="senior"
+    };
+
+    $Fee=match ($category){ "child"=> 500,
+    "adult" => 1200,
+    "senior" => 700,
+    };
+
+    問2.ゲームの経験値によってランクを分けたい　1000未満はbeginner 5000未満はmiddle、それ以上はadvancedと分類し、それぞれに初級者、中級者、上級者とメッセージを表示
+
+    if ($exp < 1000){
+        $rank="beginner"
+        }elseif ($exp < 5000){
+        $rank="middle"
+        }else{
+        $rank="advanced"
+        };
+
+        $playerLv=match($rank){ "beginner"=> 初心者,
+        "middle" => 中級者,
+        "advanced" => 上級者,
+        };
+
+        問3.温度を格納する変数$tempが、0未満ならlow　30以下ならnormal　60以下ならhigh　それ以上はdangerと分類し、それぞれ「低温に注意」、「適温です」「高温です」「危険」のメッセージを表示
+
+        if ($temp<0){
+            $level="low" ,
+            }elseif($temp<=30){
+            $level="normal" ,
+            }elseif ($temp <=60){
+            $level="high" ,
+            }else{
+            $level="danger"
+            };
+
+            $news=match($level){"low"=> "低温に注意",
+            "high" => "適温です",
+            "danger" => "高温です",
+            };
+
+
+            問4.回線速度を格納する変数$speedが、30Mbps以下ならslow　100以下ならnormal　それ以上はfastに分類し、それぞれ「遅い」「普通」「高速」と判定する
+
+            if ($speed <= 30){
+                $spin="slow"
+                }elseif($speed <=100){
+                $spin="normal"
+                }else{
+                $spin="fast"
+                };
+
+                $judge=match($spin) { "slow"=> 遅い,
+                "normal" => 普通,
+                "fast" => 高速,
+                };
+
+                問5.UV指数を格納する変数$uvの値が、2以下ならlow、5以下ならmedium、7以下ならhigh、10以下ならveryHigh、それ以上はextremeに分類しそれぞれ、「弱い」「中程度」「強い」「非常に強い」「極端に強い」と判定する
+
+                if ($uv <= 2){
+                    $uvLv="low"
+                    }elseif($uv <=5){
+                    $uvLv="medium"
+                    }elseif($uvLv <=7){
+                    $uvLv="high"
+                    }elseif($uv <=10){
+                    $uvLv="veryHigh"
+                    }else{
+                    $uvLv="extreme"
+                    };
+
+                    $check=match($uvLv){ "low"=> 弱い,
+                    "medium" => 中程度,
+                    "high" => 強い,
+                    "veryHigh" => 非常に強い,
+                    "extreme" => 極端に強い,
+                    };
+
+                    問6.心拍数を格納する変数$hrの値が、110以下ならwarmUp、140以下ならfatBurn、170以下ならaerobic、それ以上ならanaerobicに分類しそれぞれ、「ウォームアップ」「脂肪燃焼」「有酸素運動」「無酸素運動」と判定
+
+                    if ($hr <= 110){
+                        $sound="warmUp"
+                        }elseif($hr <=140){
+                        $sound="fatBurn"
+                        }elseif($hr <=170){
+                        $sound="aerobic"
+                        }else{
+                        $sound="anaerobic"
+                        };
+
+                        $fisicalLv=match($sound){ "warmUp"=> ウォームアップ,
+                        "fatBurn" => 脂肪燃焼,
+                        "aerobic" => 無酸素運動,
+                        "anaerobic" => 有酸素運動,
+                        };
